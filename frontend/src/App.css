@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    font-family: "Moderustic", sans-serif;
+  }
+  
+  .page {
+    background: url('./assets/pozadina.avif');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .all {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    width: 60vw;
+    border-radius: 20px;
+    margin: 50px auto;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 20px;
+  }
+  
+  .divider-bold{
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;    
+    border-top: 2px solid #E5B25D;
+  }
+
+  .add{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .naslov{
+    color: #523A34;
+  }
+
+  .all h1 {
+    color: #B87D4B;
+    font-size: 48px;
+  }
+  
+  .all input {
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #523A34;
+  }
+  
+  .all button {
+    padding: 15px 25px;
+    margin: 30px;
+    border-color: #523A34;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #523A34;
+    background-color: transparent;
+  }
+  
+  .all button:hover {
+    background-color: #E5B25D;
+  }
+  
+  .all ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .all li {
+    margin: 2vh auto;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    color: #523A34;
+    font-weight: bold;
+  }
+  
+  .all li button {
+    background-color: transparent;
+    border-color: #523A34;
+    color: #523A34;
+    padding: 1.5vh 2vw;
+  }
+  
+  .all li button:hover {
+    background-color: #E5B25D;
+    cursor: pointer;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+
+  .icon{
+    width: 3vw;
+    height: 3vw;
+    margin-right: 1vw;
+  }
+
+  .movie{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
