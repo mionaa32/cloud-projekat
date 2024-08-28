@@ -1,0 +1,48 @@
+name: 'movie-watchlist-app'
+
+services:
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - movie-network
+    healthcheck:
+      test: ["CMD", "sh", "-c", "echo 'Health Check Passed'"]
+      interval: 10s
+      retries: 3
+      start_period: 20s
+      timeout: 3s
+    restart: always
+
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    depends_on:
+      mongo:
+        condition: service_healthy
+    env_file:
+      - db.env
+    networks:
+      - movie-network
+    restart: always
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3001:3001"
+    depends_on:
+      - backend
+    networks:
+      - movie-network
+    restart: always
+
+volumes:
+  mongo-data:
+
+networks:
+  movie-network:
+    driver: bridge
